@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+ 
+ 
+html { scroll-behavior: smooth; }
+
+* { 
+	box-sizing: border-box; 
+	text-decoration: none;
+	outline: none;
+}
+
+body {
+   font-family: 'Poppins', sans-serif;
+   margin: 0;
+   padding: 0;
+}
+
+#topBtn {
+  position: fixed;
+  opacity: .0;
+  bottom: 1.5em;
+  margin-bottom: 20em;
+  right: 2em;
+  z-index: 0;
+  font-size: 1.5em;
+  border: none;
+  outline: none;
+  background-color: #575a89;
+  color: white;
+  cursor: pointer;
+  padding: 1em;
+  border-radius: 10px;
+  font-weight: bolder;
+}
+
+.profile th, .profile td { 
+	text-align: left; 
+	padding: 0 .5em;
+}
+
+.case th { 
+	text-align: left; 
+	padding: .5em;
+}
+
+.case td { 
+	text-align: 
+	center; padding: 0 .5em; 
+}
+
+.case table { margin: 0 auto; }
+
+h2, h3 { color: #575a89; }
+
+header { display: inline; }
+
+main {
+   padding: 0 1.5em;
+   overflow: auto;
+}
+
+.container {
+    display: flex;
+    margin: 2em auto;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+.col-3 {
+	flex: auto;
+}
+
+.col-3 button {
+	background-color: rgba(255,255,255,0);
+  	border: none;
+  	color: white;
+  	margin: 0;
+  	font-size: .9em;
+  	letter-spacing: 2px;
+	text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+             	 #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+             	 #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+             	 #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+    -webkit-font-smoothing: antialiased;
+  	padding-bottom: 15px; 
+  	font-weight: bold;
+}
+
+.selected, .col-3 button:hover
+{
+  border-bottom: 3px solid #746df6 !important;
+  color: #1f1e21;
+  text-shadow: none;
+  cursor: pointer;
+}
+
+
+.jumbotron {
+   font-size: 1.5em;
+   padding: 100px;
+   background-color: #efefef;
+   text-align: center;
+   color: white;
+   text-shadow: 2px 2px 7px #111111;
+   background-image: url("../image/sport.svg"); 
+   background-size: contain;
+   background-attachment: fixed;
+   background-position-y: .5em;
+   background-repeat-y: no-repeat;
+   height: 500px;
+   position: relative;
+}
+
+#content {
+   float: left;
+   width: 75%;
+}
+
+#content p {
+	text-align: justify;
+}
+
+#content, aside {
+	margin-bottom: 1em;
+}
+
+aside {
+   float: right;
+   width: 25%;
+   padding-left: 20px;
+}
+
+article {
+	padding: 2em;
+}
+
+nav {
+   background-color: #746df6;
+   padding: 5px;
+   position: sticky;
+   top: 0;
+}
+
+nav li {
+   display: inline;
+   list-style-type: none;
+   margin-right: 20px;
+}
+
+nav a {
+   font-size: 1.4em;
+   font-weight: 400;
+   text-decoration: none;
+   color: white;
+}
+
+nav a:hover {
+   font-weight: bold;
+}
+
+.card {
+   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+   border-radius: 5px;
+   padding: 1em;
+   margin-top: 20px;
+}
+
+.featured-image {
+   width: 100%;
+   max-height: 300px;
+   object-fit: cover;
+   object-position: center;
+}
+
+.tanggal
+{
+	font-weight: normal;
+	margin: 0 auto;
+}
+
+.profile header, .case header, .tanggal {
+   text-align: center;
+}
+
+.profile img { width: 100%; border-radius: 50%;}
+ 
+footer {
+   padding: 20px;
+   color: white;
+   background-color: #746df6;
+   text-align: center;
+   font-weight: bold;
+}
+
+/*responsive*/
+@media screen and (max-width: 1000px) {
+	body { font-size: 14px; }
+	
+	#content,
+   	aside {
+       	width: 100%;
+       	padding: 0;
+   	}
+
+   	.profile img { width: 50%; }
+}
+
+@media screen and (max-width: 600px) {
+	body { font-size: 13px; }
+}
