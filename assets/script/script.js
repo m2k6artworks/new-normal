@@ -4,6 +4,7 @@ const caption = document.getElementById('caption');
 const mask = document.getElementById('mask');
 const wash = document.getElementById('wash');
 const sport = document.getElementById('sport');
+const foot = document.getElementById('footer');
 
 
 function changeImg1() 
@@ -42,13 +43,24 @@ function changeImg3()
 const upButton = document.getElementById("topBtn");
 
 window.onscroll = function() {scroll()};
-
+    var body = document.body,
+    html = document.documentElement;
+console.log(Math.max( body.scrollHeight, body.offsetHeight, 
+                       html.clientHeight, html.scrollHeight, html.offsetHeight ))
 function scroll() {
-  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+  if (document.documentElement.scrollTop > 500) {
     upButton.style.opacity = ".7";
     upButton.style.zIndex = "10";
     upButton.style.marginBottom = "0";
     upButton.style.transition = "cubic-bezier(0.18, 0.89, 0.32, 1.28) 1s";    
+      if ((window.innerHeight + window.pageYOffset) >= document.body.offsetHeight - foot.offsetHeight + 10) {
+      upButton.style.bottom = "5em";
+      upButton.style.transition = "cubic-bezier(0.18, 0.89, 0.32, 1.28) 1s";  
+    }
+    else
+    {
+      upButton.style.bottom = "1.5em";
+    }
   } else {
     upButton.style.opacity = ".0";
     upButton.style.zIndex = "0";

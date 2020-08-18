@@ -112,6 +112,7 @@ main {
    background-repeat-y: no-repeat;
    height: 500px;
    position: relative;
+   z-index: 11;
 }
 
 #content {
