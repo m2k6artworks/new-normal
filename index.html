@@ -192,43 +192,5 @@
     </footer>
 
     <script type="text/javascript" src="assets/script/script.js"></script>
-    <script type="text/javascript">
-
-       $.getJSON('https://coronavirus-19-api.herokuapp.com/countries/Indonesia', function(data) {
-        
-        const kasusTotal = `${data.cases}`
-        const kasusHari = `${data.todayCases}`
-        const kasusJuta = `${data.casesPerOneMillion}`
-        const korbanTotal = `${data.deaths}`
-        const korbanHari = `${data.todayDeaths}`
-        const korbanJuta = `${data.deathsPerOneMillion}`
-        const tesTotal = `${data.totalTests}`
-        const tesJuta = `${data.testsPerOneMillion}`
-        const sembuh = `${data.recovered}`
-        const aktif = `${data.active}`
-        
-        $(".totalCases").html(kasusTotal);
-        $(".todayCases").html(kasusHari);
-        $(".casesPerMillion").html(kasusJuta);
-        $(".deaths").html(korbanTotal);
-        $(".todayDeaths").html(korbanHari);
-        $(".deathsPerMillion").html(korbanJuta);
-        $(".totalTests").html(tesTotal);
-        $(".testsPerMillion").html(tesJuta);
-        $(".recovered").html(sembuh);
-        $(".active").html(aktif);
-
-        const tanggal = new Date();
-
-        const thn = tanggal.getFullYear();
-        const bln = tanggal.getMonth();
-        const tgl = tanggal.getDate();
-
-        const tglformat = `Per tanggal ${tgl}-${bln}-${thn}` 
-
-        $(".tanggal").html(tglformat);
-
-      });
-    </script>
   </body>
 </html>
