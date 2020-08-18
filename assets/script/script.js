@@ -1,9 +1,9 @@
 
-var jumbo = document.querySelector('.jumbotron');
-var caption = document.getElementById('caption');
-var mask = document.getElementById('mask');
-var wash = document.getElementById('wash');
-var sport = document.getElementById('sport');
+const jumbo = document.querySelector('.jumbotron');
+const caption = document.getElementById('caption');
+const mask = document.getElementById('mask');
+const wash = document.getElementById('wash');
+const sport = document.getElementById('sport');
 
 
 function changeImg1() 
@@ -39,7 +39,7 @@ function changeImg3()
   sport.classList.add("selected");
 }
 
-var upButton = document.getElementById("topBtn");
+const upButton = document.getElementById("topBtn");
 
 window.onscroll = function() {scroll()};
 

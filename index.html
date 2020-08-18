@@ -196,16 +196,16 @@
 
        $.getJSON('https://coronavirus-19-api.herokuapp.com/countries/Indonesia', function(data) {
         
-        var kasusTotal = `${data.cases}`
-        var kasusHari = `${data.todayCases}`
-        var kasusJuta = `${data.casesPerOneMillion}`
-        var korbanTotal = `${data.deaths}`
-        var korbanHari = `${data.todayDeaths}`
-        var korbanJuta = `${data.deathsPerOneMillion}`
-        var tesTotal = `${data.totalTests}`
-        var tesJuta = `${data.testsPerOneMillion}`
-        var sembuh = `${data.recovered}`
-        var aktif = `${data.active}`
+        const kasusTotal = `${data.cases}`
+        const kasusHari = `${data.todayCases}`
+        const kasusJuta = `${data.casesPerOneMillion}`
+        const korbanTotal = `${data.deaths}`
+        const korbanHari = `${data.todayDeaths}`
+        const korbanJuta = `${data.deathsPerOneMillion}`
+        const tesTotal = `${data.totalTests}`
+        const tesJuta = `${data.testsPerOneMillion}`
+        const sembuh = `${data.recovered}`
+        const aktif = `${data.active}`
         
         $(".totalCases").html(kasusTotal);
         $(".todayCases").html(kasusHari);
@@ -218,13 +218,13 @@
         $(".recovered").html(sembuh);
         $(".active").html(aktif);
 
-        var tanggal = new Date();
+        const tanggal = new Date();
 
-        var thn = tanggal.getFullYear();
-        var bln = tanggal.getMonth();
-        var tgl = tanggal.getDate();
+        const thn = tanggal.getFullYear();
+        const bln = tanggal.getMonth();
+        const tgl = tanggal.getDate();
 
-        var tglformat = `Per tanggal ${tgl}-${bln}-${thn}` 
+        const tglformat = `Per tanggal ${tgl}-${bln}-${thn}` 
 
         $(".tanggal").html(tglformat);
 
